@@ -1,0 +1,85 @@
+.LoginPage {
+  background-image: url("../../asset/bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 120px;
+
+  &__container {
+    width: 55%;
+    margin: auto;
+    background-color: #41729f;
+    height: 72vh;
+    padding: 25px;
+    border-radius: 8px;
+
+    text-align: center;
+    h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: aliceblue;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 700;
+      color: aliceblue;
+      margin-bottom: 0;
+    }
+    &__flexContainer {
+      justify-content: center;
+      align-items: center;
+      &__img {
+        width: 95%;
+        height: 420px;
+      }
+      &__formContainer {
+        width: 85%;
+        label {
+          font-size: 20px;
+          font-weight: 400;
+          color: aliceblue;
+        }
+        Button {
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  .LoginPage {
+    padding-top: 75px;
+    &__container {
+      width: 95%;
+      margin: auto;
+      h1 {
+        font-size: 25px;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 0.5em;
+      }
+
+      &__flexContainer {
+        display: contents;
+
+        &__img {
+          display: none;
+        }
+        &__formContainer {
+          width: 100%;
+          margin-top: 35px;
+        }
+
+        :global {
+          .ant-col-12 {
+            display: contents;
+          }
+        }
+      }
+    }
+  }
+}

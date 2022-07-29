@@ -1,0 +1,78 @@
+.BookTemplate {
+  &__bookDetails {
+    width: 200px;
+    height: 250px;
+    background: #4d71a3;
+    border-radius: 2px 8px 8px 2px;
+    box-shadow: 5px -5px 5px 0px grey;
+    color: white;
+
+    &__heading {
+      width: 100%;
+      padding: 25px 12px 5px;
+      height: 72%;
+
+      h4 {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 0;
+      }
+    }
+    &__para1 {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+    &__para2 {
+      font-size: 15px;
+    }
+    &__footer {
+      clip-path: polygon(0 -53%, 100% 18%, 100% 100%, 0% 100%);
+      background: darkslategray;
+      border-radius: 0 0 8px 2px;
+      height: 28%;
+      padding-top: 18px;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    Button {
+      background-image: linear-gradient(
+        to right top,
+        #db8213,
+        #e16f14,
+        #e6591d,
+        #ea3f28,
+        #eb1234
+      );
+      margin-top: 10px;
+      color: white;
+      border-radius: 10px;
+      font-weight: 600;
+
+      &:hover {
+        color: white;
+        background-image: linear-gradient(
+          to right top,
+          #db8213,
+          #e16f14,
+          #e6591d,
+          #ea3f28,
+          #eb1234
+        );
+        transition: transform 0.2s;
+        transform: scale(1.1);
+      }
+      &:focus {
+        color: white;
+        background-image: linear-gradient(
+          to right top,
+          #db8213,
+          #e16f14,
+          #e6591d,
+          #ea3f28,
+          #eb1234
+        );
+      }
+    }
+  }
+}

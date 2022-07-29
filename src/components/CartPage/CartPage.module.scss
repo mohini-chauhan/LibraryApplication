@@ -1,0 +1,226 @@
+.CartPage {
+  width: 100%;
+  background: #b7c3d0;
+  min-height: 100vh;
+  &__navBar {
+    width: 100%;
+    background-color: #162252 !important;
+    padding: 5px 24px !important;
+    position: fixed !important;
+    z-index: 999;
+    :global {
+      .ant-page-header-heading {
+        &-left {
+          width: 50%;
+          .ant-page-header-back {
+            &-button {
+              display: none !important;
+            }
+          }
+        }
+        &-extra {
+          margin: 25px 10px;
+          width: 50%;
+          Button {
+            background-image: linear-gradient(
+              to right top,
+              #db8213,
+              #e16f14,
+              #e6591d,
+              #ea3f28,
+              #eb1234
+            );
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    &__btnContainer {
+      float: right;
+      justify-content: space-between;
+      Button {
+        margin-left: 20px;
+      }
+    }
+    &__titleContents {
+      img {
+        width: 150px;
+        height: 45px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__parentContainer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #162252;
+    padding-top: 125px;
+    &__empty {
+      padding-top: 200px;
+      font-size: 20px;
+    }
+    &__center {
+      width: 80%;
+      margin: 15px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      div:first-child {
+        div:first-child {
+          width: 150px;
+          height: auto;
+          h4 {
+            font-size: 15px;
+          }
+          p {
+            font-weight: 200;
+          }
+          div:nth-child(2) {
+            height: 70px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      &__btnContainer {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        Button {
+          background: #162252;
+          color: white;
+          &:hover {
+            background: #162252;
+            color: white;
+          }
+          &:focus {
+            background: #162252;
+            color: white;
+          }
+        }
+        &__quantity {
+          padding: 0 10px !important;
+          font-weight: 400;
+        }
+      }
+      &__deletebtn {
+        width: 25%;
+        padding: 20px;
+        Button {
+          background: #162252;
+          color: white;
+          &:hover {
+            background: #162252;
+            color: white;
+          }
+          &:focus {
+            background: #162252;
+            color: white;
+          }
+        }
+      }
+
+      > div {
+        > div {
+          Button {
+            display: none;
+          }
+        }
+      }
+      &__price {
+        padding: 5px;
+        width: 15%;
+      }
+    }
+  }
+  &__divider {
+    border-bottom: 2px solid #162252;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__costContainer {
+    width: 100%;
+    text-align: right;
+    float: right;
+    background: #b7c3d0;
+    padding-right: 30px;
+    &__orderBtn {
+      Button {
+        background: #162252;
+        color: white;
+        &:hover {
+          background: #162252;
+          color: white;
+        }
+        &:focus {
+          background: #162252;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  .CartPage {
+    &__navBar {
+      padding: 5px 10px !important;
+      :global {
+        .ant-page-header-heading {
+          &-left {
+            width: 55%;
+          }
+          &-extra {
+            width: 35%;
+          }
+        }
+      }
+      &__titleContents {
+        img {
+          width: 126px;
+          height: 42px;
+        }
+      }
+    }
+    &__parentContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      grid-gap: 10px;
+
+      &__center {
+        width: 100%;
+        display: block;
+        div:first-child {
+          display: inline-block;
+        }
+
+        &__btnContainer {
+          width: 170px;
+          margin: auto;
+          padding-top: 10px;
+        }
+        &__price {
+          width: 220px;
+          margin: auto;
+        }
+        &__deletebtn {
+          width: 220px;
+          padding: 0;
+          margin: auto !important;
+        }
+      }
+    }
+
+    &__costContainer {
+      &__orderBtn {
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
